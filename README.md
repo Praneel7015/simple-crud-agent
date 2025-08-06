@@ -1,21 +1,26 @@
 # Google ADK Database Agent
 
-A simple Google ADK agent using the Gemini 2.0 Flash model to perform CRUD operations on a SQLite user database. Interact with the agent via the ADK Dev UI (`adk web`).
+A simple Google ADK agent using the Gemini 2.0 Flash model to perform CRUD operations on a SQLite user database. Follows Google Agent Development Kit format structure.
 
 ## Project Structure
 
 ```
-your_project/
+simple-crud-agent/
 │
-├── src/
+├── agent/                      # Main agent directory (Google ADK format)
 │   ├── __init__.py
-│   ├── agent.py         # The ADK agent definition
-│   └── database.py      # SQLite CRUD logic
+│   ├── agent.py               # ADK agent definition and configuration
+│   └── tools/                 # Tools directory
+│       ├── __init__.py
+│       └── tools.py           # All CRUD operations and database logic
 │
+├── src/                       # Legacy directory (can be removed)
+├── tools/                     # Legacy directory (can be removed)
+├── main.py                    # Entry point for the agent
 ├── requirements.txt
-├── .env                 # For GOOGLE_API_KEY
+├── .env                       # For GOOGLE_API_KEY
 ├── README.md
-└── users.db             # SQLite database (auto-created)
+└── users.db                   # SQLite database (auto-created)
 ```
 
 ## Setup
